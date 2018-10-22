@@ -3,3 +3,4 @@
 export(dump_plot)
 export(isnt_out_tukey)
 export(print_table)
+export(shiny_ts_features)

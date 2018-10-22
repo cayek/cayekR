@@ -13,6 +13,7 @@ dump_plot <- function(p, path) {
     setwd(dirname(path))
     htmlwidgets::saveWidget(plotly::as_widget(p),
                             file=basename(path))
+    message(glue::glue("[[file:{path}]]"))
   },
   finally = {setwd(cur)}
   )
