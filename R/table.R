@@ -8,8 +8,10 @@
 ##' @author cayek
 ##' @export
 print_table <- function(df, ...) {
-  ascii::ascii(df, colnames=colnames(df),
-               rownames=rownames(df),
-               include.rownames = FALSE,
-               ...)
+  ## TODO not working with the print inside the function
+  library("ascii")
+  ascii(df, header=TRUE, colnames=colnames(df), rownames=rownames(df))
+  ## print(ascii(df, header=TRUE, colnames=colnames(df), rownames=rownames(df)),
+  ##       type="org")
+
 }
